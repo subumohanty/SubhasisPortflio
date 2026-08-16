@@ -1970,12 +1970,13 @@ img {
     text-align: center;
   }
 
-  /* Make footer character and emojis smaller on phone */
+  /* Make footer character visible and move away from menu button on phone */
   .footer-character {
-    right: 15px;
+    right: auto;
+    left: 20px;
     bottom: 50px;
-    transform: scale(0.65);
-    transform-origin: bottom right;
+    transform: scale(0.7);
+    transform-origin: bottom left;
   }
   
   .footer-character:hover .character-svg {
