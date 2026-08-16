@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subhasis Mohanty — Supply Chain Ops × Data Automation</title>
+  <meta name="description" content="Portfolio of Subhasis Mohanty — Supply Chain Ops Analyst at Flipkart. Building tools that move millions of shipments through automation, data pipelines, and geospatial intelligence." />
+  <meta property="og:title" content="Subhasis Mohanty — Portfolio" />
+  <meta property="og:description" content="Supply Chain Ops × Data Automation — building tools that move millions of shipments." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a192f" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Page Loader ── -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       HERO SECTION
+       ════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="star-canvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-title-group">
+        <div class="astronaut-container">
+          <svg class="astronaut-svg" viewBox="-10 -15 150 170" width="65" height="92">
+            <defs>
+              <filter id="astro-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.5" />
+              </filter>
+              <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#cbd5e1" />
+              </linearGradient>
+              <linearGradient id="backpackGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#94a3b8" />
+                <stop offset="100%" stop-color="#64748b" />
+              </linearGradient>
+            </defs>
+
+            <g filter="url(#astro-shadow)">
+              <!-- Backpack behind -->
+              <rect x="18" y="24" width="64" height="76" rx="14" fill="url(#backpackGrad)" />
+              
+              <!-- Left Leg -->
+              <rect x="25" y="94" width="18" height="50" rx="9" fill="#94a3b8" transform="rotate(7 34 94)" />
+              <rect x="28" y="97" width="12" height="44" rx="6" fill="#e2e8f0" transform="rotate(7 34 94)" />
+              
+              <!-- Right Leg -->
+              <rect x="57" y="94" width="18" height="50" rx="9" fill="#94a3b8" transform="rotate(-7 66 94)" />
+              <rect x="60" y="97" width="12" height="44" rx="6" fill="#e2e8f0" transform="rotate(-7 66 94)" />
+              
+              <!-- Torso -->
+              <rect x="27" y="46" width="46" height="52" rx="12" fill="url(#suitGrad)" />
+              <rect x="33" y="52" width="34" height="40" rx="7" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" />
+              
+              <!-- Left Arm -->
+              <rect x="15" y="46" width="14" height="44" rx="7" fill="#94a3b8" transform="rotate(6 22 46)" />
+              <rect x="18" y="49" width="8" height="38" rx="4" fill="#e2e8f0" transform="rotate(6 22 46)" />
+              
+              <!-- Right Arm (Waving Arm group pivoting at shoulder x=77, y=48) -->
+              <g class="astronaut-arm-right">
+                <rect x="71" y="46" width="14" height="44" rx="7" fill="#94a3b8" transform="rotate(-6 78 46)" />
+                <rect x="74" y="49" width="8" height="38" rx="4" fill="#e2e8f0" transform="rotate(-6 78 46)" />
+              </g>
+              
+              <!-- Helmet Outer Head -->
+              <ellipse cx="50" cy="27" rx="25" ry="23" fill="#ffffff" />
+              <!-- Helmet Visor -->
+              <ellipse cx="50" cy="26" rx="20" ry="14" fill="#0b1329" stroke="#38bdf8" stroke-width="1" />
+              <ellipse cx="43" cy="21" rx="7" ry="4" fill="rgba(255,255,255,0.7)" transform="rotate(-15 43 21)" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero-name-block">
+          <p class="hero-greeting">I'm</p>
+          <h1 class="hero-name">Subhasis Mohanty</h1>
+        </div>
+      </div>
+      <p class="hero-tagline">
+        I make random things, mostly using JavaScript. and <span class="highlight">Supply Chain Ops</span> × <span class="highlight">Data Automation</span> — building tools that move millions of shipments.
+      </p>
+
+      <div class="social-links">
+        <!-- GitHub -->
+        <a href="https://github.com/subumohanty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/subhasis16" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:subhasis.mohanty@outlook.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scroll-down-btn">
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       CITY SKYLINE SVG DIVIDER
+       ════════════════════════════════════════════ -->
+  <div class="skyline-divider">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0e2240" />
+          <stop offset="100%" stop-color="#0d1117" />
+        </linearGradient>
+      </defs>
+      <!-- Sky gradient background -->
+      <rect width="1440" height="220" fill="url(#skyGrad)" />
+      <!-- Skyline silhouette — Indian-inspired architecture -->
+      <path d="
+        M0,220 L0,180
+        L30,180 L30,160 L50,160 L50,140 L55,140 L55,120 L58,110 L61,120 L61,140 L66,140 L66,160 L80,160 L80,180
+        L120,180 L120,150 L125,150 L125,130 L135,130 L135,110 L140,110 L140,90 L145,85 L150,90 L150,110 L155,110 L155,130 L165,130 L165,150 L170,150 L170,180
+        L200,180 L200,170 L210,170 L210,155 L220,155 L220,170 L230,170 L230,180
+        L280,180 L280,140 L285,140 L285,100 L290,100 L290,80 L300,70 L310,80 L310,100 L315,100 L315,140 L320,140 L320,180
+        L370,180 L370,160 L375,160 L375,140 L380,130 L385,125 L390,130 L395,140 L395,160 L400,160 L400,180
+        L440,180 L440,130 L445,130 L445,60 L448,55 L451,60 L451,130 L456,130 L456,180
+        L490,180 L490,150 L500,150 L500,120 L505,120 L505,100 L515,90 L520,80 L525,70 L530,80 L535,90 L545,100 L545,120 L550,120 L550,150 L560,150 L560,180
+        L600,180 L600,155 L610,155 L610,135 L620,135 L620,155 L630,155 L630,180
+        L660,180 L660,120 L665,120 L665,70 L670,65 L675,70 L675,120 L680,120 L680,180
+        L710,180 L710,160 L715,160 L715,130 L720,120 L730,110 L740,100 L745,97 L750,100 L760,110 L770,120 L775,130 L775,160 L780,160 L780,180
+        L820,180 L820,90 L825,90 L825,50 L830,45 L835,50 L835,90 L840,90 L840,180
+        L870,180 L870,140 L880,140 L880,100 L885,95 L890,100 L890,140 L900,140 L900,180
+        L930,180 L930,160 L935,160 L935,130 L940,130 L940,110 L945,105 L950,100 L955,105 L960,110 L960,130 L965,130 L965,160 L970,160 L970,180
+        L1010,180 L1010,150 L1015,150 L1015,120 L1020,115 L1025,120 L1025,150 L1030,150 L1030,180
+        L1060,180 L1060,80 L1065,80 L1065,50 L1070,45 L1080,40 L1090,45 L1095,50 L1095,80 L1100,80 L1100,180
+        L1130,180 L1130,140 L1140,140 L1140,110 L1150,110 L1150,140 L1160,140 L1160,180
+        L1190,180 L1190,130 L1195,130 L1195,90 L1200,85 L1205,90 L1205,130 L1210,130 L1210,180
+        L1240,180 L1240,155 L1250,155 L1250,130 L1255,125 L1260,130 L1260,155 L1270,155 L1270,180
+        L1300,180 L1300,100 L1305,100 L1305,65 L1310,60 L1315,55 L1320,60 L1325,65 L1325,100 L1330,100 L1330,180
+        L1370,180 L1370,150 L1380,150 L1380,120 L1390,120 L1390,150 L1400,150 L1400,180
+        L1440,180 L1440,220 Z
+      " fill="#0d1117" />
+      <!-- Small details — antennas, flags -->
+      <line x1="58" y1="110" x2="58" y2="95" stroke="#0d1117" stroke-width="2" />
+      <line x1="448" y1="55" x2="448" y2="38" stroke="#0d1117" stroke-width="2" />
+      <circle cx="448" cy="36" r="3" fill="#0d1117" />
+      <line x1="830" y1="45" x2="830" y2="25" stroke="#0d1117" stroke-width="2" />
+      <line x1="1315" y1="55" x2="1315" y2="35" stroke="#0d1117" stroke-width="2" />
+      <circle cx="1315" cy="33" r="3" fill="#0d1117" />
+    </svg>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       PROJECTS SECTION
+       ════════════════════════════════════════════ -->
+  <div class="projects-section" id="projects-section">
+    <section class="section" id="projects">
+      <div class="projects-header-group">
+        <div class="coder-container">
+          <svg class="coder-svg" viewBox="0 0 120 120" width="100" height="100">
+            <defs>
+              <filter id="glowScreen" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+              </filter>
+            </defs>
+
+            <!-- Screen glow -->
+            <ellipse cx="90" cy="65" rx="22" ry="26" fill="#38bdf8" opacity="0.35" filter="url(#glowScreen)"/>
+
+            <!-- Floating Emojis -->
+            <g class="coder-emojis">
+              <text x="5" y="25" font-size="12" class="emoji-float" style="animation-delay: 0s;">🚀</text>
+              <text x="98" y="32" font-size="12" class="emoji-float" style="animation-delay: 0.5s;">💻</text>
+              <text x="82" y="12" font-size="10" class="emoji-float" style="animation-delay: 1.2s;">✨</text>
+              <text x="25" y="10" font-size="12" class="emoji-float" style="animation-delay: 1.8s;">☕</text>
+            </g>
+
+            <!-- Sitting Pants & Legs -->
+            <path d="M 22 92 L 92 92 C 92 92, 92 108, 80 108 L 22 108 Z" fill="#334155" />
+            <path d="M 76 92 L 92 92 C 95 92, 95 108, 80 108 Z" fill="#cbd5e1" />
+
+            <!-- Torso / Blue Shirt -->
+            <path d="M 22 55 C 22 50, 48 50, 52 55 L 52 92 L 22 92 Z" fill="#0284c7" />
+
+            <!-- Head & Hair -->
+            <circle cx="36" cy="30" r="16" fill="#ffcca2" />
+            <!-- Hair cap -->
+            <path d="M 20 30 C 20 12, 44 12, 48 24 C 40 22, 34 26, 30 32 Z" fill="#1e293b" />
+            <!-- Neck -->
+            <rect x="32" y="44" width="10" height="12" fill="#e5b38a" />
+
+            <!-- Shirt Sleeve -->
+            <path d="M 24 55 L 48 70 L 40 78 L 22 62 Z" fill="#0369a1" />
+
+            <!-- Laptop Base & Screen -->
+            <polygon points="50,92 106,92 100,88 56,88" fill="#cbd5e1" />
+            <polygon points="78,88 108,52 104,50 74,86" fill="#475569" />
+            <polygon points="80,87 106,53 103,51 76,85" fill="#f8fafc" />
+
+            <!-- Animated Typing Hands -->
+            <!-- Back Arm & Hand -->
+            <g class="coder-hand-right">
+              <path d="M 34 64 L 62 82" stroke="#e5b38a" stroke-width="7.5" stroke-linecap="round" />
+              <circle cx="62" cy="82" r="5" fill="#e5b38a" />
+            </g>
+
+            <!-- Front Arm & Hand -->
+            <g class="coder-hand-left">
+              <path d="M 38 68 L 68 85" stroke="#ffcca2" stroke-width="7.5" stroke-linecap="round" />
+              <circle cx="68" cy="85" r="5" fill="#ffcca2" />
+            </g>
+          </svg>
+        </div>
+        <h2 class="section-label reveal">PROJECTS</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: GeoPolygon Tool -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-header">
+            <h3 class="card-title">Web-Based GeoPolygon Tool</h3>
+          </div>
+          <p class="card-description">
+            Pan-India pincode/district-level GeoPolygon tool, successfully integrated into
+            <strong>Flipkart's Internal GeoPolygon system</strong> for precise geographic mapping and shipment routing.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">GMap API</span>
+            <span class="tech-tag">GDrive API</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Misroute Debugging Tool -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-header">
+            <h3 class="card-title">Misroute Debugging Tool</h3>
+          </div>
+          <p class="card-description">
+            Identifies actual shipment hub and detects short-address shipments via accurate
+            lat/long geolocation analysis. Reduced misroute rates from <strong>8% → 0.4%</strong>.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">OSRE</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">GMap API</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Short Address Prediction -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-header">
+            <h3 class="card-title">Short Address Prediction Tool</h3>
+          </div>
+          <p class="card-description">
+            Processes <strong>5L+ shipments daily</strong> to flag short-address items in everyday landings,
+            improving delivery accuracy and significantly reducing misroutes at scale.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Cluster Predicted Polygon -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-header">
+            <h3 class="card-title">Cluster Predicted Polygon Tool</h3>
+          </div>
+          <p class="card-description">
+            Generates WM-wise polygons inside hub geofences using delivered lat/long data for
+            precise cluster boundary prediction and optimized last-mile delivery.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OSRE</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 5: IoT Health Monitor -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="card-header">
+            <h3 class="card-title">Smart Health Care Monitoring System</h3>
+            <a href="https://ieeexplore.ieee.org/document/10307347" target="_blank" rel="noopener noreferrer" class="card-external-link" aria-label="View IEEE Publication">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <p class="card-description">
+            IoT system tracking vitals (temperature, oxygen, ECG) via NodeMCU and ThinkSpeak cloud.
+            <strong>Published at ICCCNT 2023, IIT Delhi (IEEE).</strong>
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">NodeMCU</span>
+            <span class="tech-tag">ThinkSpeak</span>
+            <span class="tech-tag">LM35</span>
+            <span class="tech-tag">MAX30100</span>
+            <span class="tech-tag">ECG</span>
+          </div>
+        </div>
+
+        <!-- Project 6: Portfolio Website -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="card-header">
+            <h3 class="card-title">Personal Portfolio Website</h3>
+            <a href="https://github.com/subumohanty/Subhasis-Portfolio" target="_blank" rel="noopener noreferrer" class="card-external-link" aria-label="View on GitHub">
+              <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <p class="card-description">
+            Designed and developed with interactive UI, starry canvas animations, and a premium dark-theme
+            aesthetic to showcase projects and professional experience.
+          </p>
+          <div class="card-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Canvas API</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       ABOUT SECTION
+       ════════════════════════════════════════════ -->
+  <div class="about-section">
+    <!-- Background Watermark Text -->
+    <div class="about-watermark" aria-hidden="true">
+      <span class="wm-first">Subhasis</span>
+      <span class="wm-last">Mohanty</span>
+    </div>
+
+    <section class="section" id="about">
+      <h2 class="section-label reveal">ABOUT</h2>
+
+      <div class="about-grid">
+        <!-- Left Column: Photo + Spotify -->
+        <div class="about-left reveal">
+          <div class="about-photo-wrapper">
+            <img src="profile.jpg" alt="Subhasis Mohanty" class="about-photo" />
+          </div>
+
+          <!-- Spotify Widget -->
+          <div class="about-spotify">
+            <div class="spotify-header">
+              <div class="equalizer">
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+              </div>
+              <span class="spotify-label">Now Playing</span>
+            </div>
+            <div class="spotify-embed">
+              <iframe
+                style="border-radius: 14px;"
+                src="https://open.spotify.com/embed/playlist/7kWhr4XYmWnbORToEI10nF?utm_source=generator&theme=0"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Bio + Work Experience -->
+        <div class="about-right reveal reveal-delay-2">
+          <div class="about-bio">
+            <p class="bio-greeting">Hieee!!</p>
+            <p class="bio-name">I'm <strong>Subhasis</strong>.</p>
+
+            <p>I love building data automation tools, libraries, npm packages, geocoding solutions, and random silly side projects.</p>
+
+            <p>I've been actively writing code for <span class="metric">3+ years</span>, working across different areas of tech and supply chain — from building servers with Python & Django, to creating compilers for static-site generators, designing sleek and fast product pages, and building cross-platform design systems to solve ops-related issues in supply chain.</p>
+
+            <p class="bio-quirky">Basically, I like breaking things, building things, automating things, and occasionally wondering <em>"why did I build this?"</em></p>
+
+            <p class="bio-status">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Currently: Building, learning & experimenting with things that make life a little easier</span>
+            </p>
+          </div>
+
+          <!-- Work Experience -->
+          <h3 class="about-work-heading">Work Experience</h3>
+
+          <div class="about-work-list">
+            <!-- Flipkart - Current Role -->
+            <div class="about-work-item">
+              <div class="work-logo">
+                <img src="https://media.licdn.com/dms/image/v2/D560BAQHtneRyv-iofA/company-logo_200_200/B56Za6BjbWHgAM-/0/1746877692629/flipkart_logo?e=1787788800&v=beta&t=2HwaAsqLAipVbIoFE9wZDVsWWwvXF54LsBM53HluA8U" alt="Flipkart" class="company-logo-img" />
+              </div>
+              <div class="work-details">
+                <h4 class="work-title">Analyst - Process Design and Automation</h4>
+                <p class="work-company-name">Flipkart India Pvt. Ltd.</p>
+                <p class="work-date">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Dec 2025 – Present
+                </p>
+                <div class="work-tags">
+                  <span class="work-tag">Python</span>
+                  <span class="work-tag">SQL</span>
+                  <span class="work-tag">Selenium</span>
+                  <span class="work-tag">JavaScript</span>
+                  <span class="work-tag">AI Tooling</span>
+                  <span class="work-tag">GUI</span>
+                  <span class="work-tag">Supply Chain</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flipkart - Intern -->
+            <div class="about-work-item">
+              <div class="work-logo">
+                <img src="https://media.licdn.com/dms/image/v2/D560BAQHtneRyv-iofA/company-logo_200_200/B56Za6BjbWHgAM-/0/1746877692629/flipkart_logo?e=1787788800&v=beta&t=2HwaAsqLAipVbIoFE9wZDVsWWwvXF54LsBM53HluA8U" alt="Flipkart" class="company-logo-img" />
+              </div>
+              <div class="work-details">
+                <h4 class="work-title">Intern - Supply Chain Design / Automation</h4>
+                <p class="work-company-name">Flipkart India Pvt. Ltd.</p>
+                <p class="work-date">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Nov 2023 – Nov 2025 · 2 years
+                </p>
+                <div class="work-tags">
+                  <span class="work-tag">Python</span>
+                  <span class="work-tag">Selenium</span>
+                  <span class="work-tag">SQL</span>
+                  <span class="work-tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       SKILLS SECTION
+       ════════════════════════════════════════════ -->
+  <div class="skills-section">
+    <section class="section" id="skills">
+      <h2 class="section-label reveal">SKILLS</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal reveal-delay-1">
+          <h3 class="skill-category-title">Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <h3 class="skill-category-title">Automation & Data</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Selenium</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">GUI Automation</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <h3 class="skill-category-title">BI & Visualization</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Plotly</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-1">
+          <h3 class="skill-category-title">APIs & Integrations</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">GMap API</span>
+            <span class="skill-tag">GDrive API</span>
+            <span class="skill-tag">Google Sheets API</span>
+            <span class="skill-tag">Apps Script</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-2">
+          <h3 class="skill-category-title">Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Microsoft Office</span>
+            <span class="skill-tag">Google Suite</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal reveal-delay-3">
+          <h3 class="skill-category-title">Operating Systems</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Windows</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+  <!-- ════════════════════════════════════════════
+       FOOTER / CONTACT
+       ════════════════════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <h2 class="footer-heading reveal">Get In Touch</h2>
+    <p class="footer-text reveal">
+      Open to opportunities in supply chain analytics, data engineering, and product management.
+      Let's build something impactful together.
+    </p>
+
+    <a href="resume.html" target="_blank" class="footer-resume-btn reveal">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      View Resume
+    </a>
+
+    <div class="footer-socials reveal">
+      <a href="https://github.com/subumohanty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/subhasis16" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="mailto:subhasis.mohanty@outlook.com" class="social-link" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </a>
+    </div>
+
+    <!-- Animated Character -->
+    <div class="footer-character" id="footer-character">
+      <div class="emoji-throw" id="emoji-particles"></div>
+      <svg class="character-svg" viewBox="0 0 140 200" width="90" height="130">
+        <!-- Left Leg (spread slightly) -->
+        <rect x="38" y="138" width="16" height="45" rx="8" fill="#1e293b" transform="rotate(-5 46 138)" />
+        <!-- Right Leg -->
+        <rect x="82" y="138" width="16" height="45" rx="8" fill="#1e293b" transform="rotate(5 90 138)" />
+        <!-- Left Shoe -->
+        <ellipse cx="42" cy="183" rx="12" ry="6" fill="#475569" transform="rotate(-5 42 183)" />
+        <ellipse cx="42" cy="182" rx="8" ry="3" fill="#e2e8f0" transform="rotate(-5 42 182)" />
+        <!-- Right Shoe -->
+        <ellipse cx="96" cy="183" rx="12" ry="6" fill="#475569" transform="rotate(5 96 183)" />
+        <ellipse cx="96" cy="182" rx="8" ry="3" fill="#e2e8f0" transform="rotate(5 96 182)" />
+
+        <!-- Torso (bright blue) -->
+        <rect x="35" y="80" width="68" height="62" rx="12" fill="#0ea5e9" />
+
+        <!-- Left Arm Group (raised up) -->
+        <g class="char-arm-left">
+          <!-- Upper arm -->
+          <rect x="8" y="40" width="14" height="50" rx="7" fill="#ffcca2" />
+          <!-- Sleeve cuff -->
+          <rect x="6" y="68" width="18" height="14" rx="7" fill="#0284c7" />
+          <!-- Hand -->
+          <circle cx="15" cy="40" r="9" fill="#ffcca2" />
+        </g>
+
+        <!-- Right Arm Group (raised up) -->
+        <g class="char-arm-right">
+          <!-- Upper arm -->
+          <rect x="116" y="40" width="14" height="50" rx="7" fill="#ffcca2" />
+          <!-- Sleeve cuff -->
+          <rect x="114" y="68" width="18" height="14" rx="7" fill="#0284c7" />
+          <!-- Hand -->
+          <circle cx="123" cy="40" r="9" fill="#ffcca2" />
+        </g>
+
+        <!-- Head -->
+        <circle cx="69" cy="50" r="24" fill="#ffcca2" />
+        <!-- Hair cap (black, covers top half) -->
+        <path d="M 45 50 Q 45 22, 69 22 Q 93 22, 93 50 Q 85 44, 69 44 Q 53 44, 45 50 Z" fill="#1e293b" />
+      </svg>
+    </div>
+
+    <p class="footer-credit">
+      Designed & Built by <span class="accent">Subhasis Mohanty</span> · 2025
+    </p>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       SIDE NAVIGATION
+       ════════════════════════════════════════════ -->
+  <nav class="side-nav hidden" aria-label="Section navigation">
+    <button class="nav-dot active" data-target="hero" aria-label="Hero">
+      <span class="nav-tooltip">Home</span>
+    </button>
+    <button class="nav-dot" data-target="projects" aria-label="Projects">
+      <span class="nav-tooltip">Projects</span>
+    </button>
+    <button class="nav-dot" data-target="about" aria-label="About">
+      <span class="nav-tooltip">About</span>
+    </button>
+    <button class="nav-dot" data-target="skills" aria-label="Skills">
+      <span class="nav-tooltip">Skills</span>
+    </button>
+    <button class="nav-dot" data-target="contact" aria-label="Contact">
+      <span class="nav-tooltip">Contact</span>
+    </button>
+  </nav>
+
+  <!-- ════════════════════════════════════════════
+       CORNER RADIAL MENU
+       ════════════════════════════════════════════ -->
+  <div class="corner-menu-container" id="corner-menu">
+    <!-- Collapsed Trigger Button (Quarter Circle with 3 lines) -->
+    <button class="corner-menu-trigger" id="corner-menu-trigger" aria-label="Open Navigation">
+      <div class="hamburger-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <!-- Expanded Quarter Circle Wheel -->
+    <div class="corner-menu-wheel" id="corner-menu-wheel">
+      <div class="corner-menu-items">
+        <a href="#about" class="corner-menu-item" data-target="about">
+          <svg viewBox="0 0 24 24" class="menu-icon"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          <span>About</span>
+        </a>
+        <a href="#hero" class="corner-menu-item" data-target="hero">
+          <svg viewBox="0 0 24 24" class="menu-icon"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="#projects" class="corner-menu-item" data-target="projects">
+          <svg viewBox="0 0 24 24" class="menu-icon"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          <span>Projects</span>
+        </a>
+        <a href="#skills" class="corner-menu-item" data-target="skills">
+          <svg viewBox="0 0 24 24" class="menu-icon"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c-.4 0-.7.3-.7.7 0 2.4-1.9 4.3-4.3 4.3s-4.3-1.9-4.3-4.3c0-.4-.3-.7-.7-.7s-.7.3-.7.7c0 3 2.2 5.5 5.1 5.9v2.4h-2.5c-.4 0-.7.3-.7.7s.3.7.7.7h6.4c.4 0 .7-.3.7-.7s-.3-.7-.7-.7h-2.5v-2.4c2.9-.4 5.1-2.9 5.1-5.9 0-.4-.3-.7-.7-.7z"/></svg>
+          <span>Skills</span>
+        </a>
+      </div>
+      
+      <!-- Close Button at the bottom-right corner tip -->
+      <button class="corner-menu-close" id="corner-menu-close" aria-label="Close Navigation">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

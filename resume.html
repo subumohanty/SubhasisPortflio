@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Subhasis Mohanty</title>
+  <meta name="description" content="Resume of Subhasis Mohanty — Analyst at Flipkart specializing in Supply Chain Process Design & Automation." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #dbeafe;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Top Action Bar ── */
+    .action-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.9rem 1.5rem;
+      background: rgba(219, 234, 254, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1.2rem;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-download {
+      background: #22c55e;
+      color: #fff;
+    }
+    .btn-download:hover {
+      background: #16a34a;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+
+    .btn-view {
+      background: #3b82f6;
+      color: #fff;
+    }
+    .btn-view:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .action-btn svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    /* ── Resume Card ── */
+    .resume-card {
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      margin: 1.5rem auto 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 2.5rem 3rem;
+      line-height: 1.55;
+      color: #1e293b;
+    }
+
+    /* ── Header ── */
+    .resume-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .resume-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+    .resume-name span {
+      font-weight: 400;
+    }
+
+    .resume-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      color: #64748b;
+      margin-top: 0.3rem;
+      font-weight: 500;
+    }
+    .resume-role::before {
+      content: '# ';
+      color: #3b82f6;
+      font-weight: 700;
+    }
+
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin-top: 0.7rem;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    .resume-contact a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .resume-contact a:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .contact-item svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ── Sections ── */
+    .resume-section {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #3b82f6;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid #dbeafe;
+      margin-bottom: 0.8rem;
+    }
+
+    .summary-text {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.65;
+    }
+    .summary-text strong {
+      color: #1e293b;
+    }
+
+    /* ── Two Column Layout ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+    }
+
+    /* ── Work Experience ── */
+    .work-entry {
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .work-entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    .work-role-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.15rem;
+    }
+
+    .work-role-logo {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .work-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .work-company {
+      font-size: 0.82rem;
+      color: #3b82f6;
+      font-weight: 600;
+    }
+
+    .work-date {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .work-date svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .work-subtitle {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .work-bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    .work-bullets li {
+      position: relative;
+      padding-left: 1rem;
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.55;
+      margin-bottom: 0.35rem;
+    }
+    .work-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+    .work-bullets li strong {
+      color: #1e293b;
+    }
+    .work-bullets a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .work-bullets a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Right Column Sections ── */
+    .right-section {
+      margin-bottom: 1.4rem;
+    }
+
+    .right-section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #3b82f6;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .right-section-title svg {
+      width: 14px;
+      height: 14px;
+      fill: #3b82f6;
+    }
+
+    .achievement-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .achievement-list li {
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.55;
+      margin-bottom: 0.4rem;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .achievement-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #3b82f6;
+      font-weight: 700;
+    }
+    .achievement-list li strong {
+      color: #1e293b;
+    }
+    .achievement-list a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .achievement-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Technical Skills Tags ── */
+    .skills-grid-resume {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      background: #f1f5f9;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+      white-space: nowrap;
+    }
+
+    .skill-pill svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* ── Education ── */
+    .edu-entry {
+      margin-bottom: 0.6rem;
+    }
+
+    .edu-degree {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-school {
+      font-size: 0.82rem;
+      color: #475569;
+    }
+
+    .edu-date {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .edu-date svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .edu-gpa {
+      font-size: 0.82rem;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    /* ── Footer Tagline ── */
+    .resume-footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.78rem;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    .resume-footer a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .resume-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .resume-card {
+        margin: 1rem 0.5rem 2rem;
+        padding: 1.5rem 1.2rem;
+        border-radius: 8px;
+      }
+      .resume-name { font-size: 1.6rem; }
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .action-bar {
+        padding: 0.7rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Top Action Bar ── -->
+  <div class="action-bar">
+    <a href="resume.pdf" download="Subhasis_Mohanty_Resume.pdf" class="action-btn btn-download">
+      <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      Download PDF
+    </a>
+    <a href="resume.pdf" target="_blank" class="action-btn btn-view">
+      <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      View PDF
+    </a>
+  </div>
+
+  <!-- ── Resume Card ── -->
+  <div class="resume-card">
+
+    <!-- Header -->
+    <div class="resume-header">
+      <h1 class="resume-name"><span>Subhasis</span> <strong>Mohanty</strong></h1>
+      <p class="resume-role">Analyst — Process Design & Automation | Supply Chain Ops</p>
+      <div class="resume-contact">
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:subhasis.mohanty@outlook.com">subhasis.mohanty@outlook.com</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="#64748b"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <a href="https://github.com/subumohanty" target="_blank">subumohanty</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="#64748b"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://www.linkedin.com/in/subhasis16" target="_blank">Subhasis Mohanty</a>
+        </span>
+        <span class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bangalore, India
+        </span>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="resume-section">
+      <h2 class="section-title">Profile Summary</h2>
+      <p class="summary-text">
+        Process Design and Automation Analyst at <strong>Flipkart</strong> with <strong>3+ years</strong> of experience in supply chain operations, data automation, and geospatial intelligence. Built tools processing <strong>5L+ shipments daily</strong>, reduced misroute rates from <strong>8% → 0.4%</strong>, and developed Pan-India geocoding solutions integrated into Flipkart's internal systems. Passionate about building data pipelines, automation frameworks, and developer tools using Python, JavaScript, and SQL.
+      </p>
+    </div>
+
+    <!-- Two Column: Work + Achievements/Skills/Education -->
+    <div class="two-col">
+
+      <!-- LEFT: Work Experience -->
+      <div>
+        <div class="resume-section">
+          <h2 class="section-title">Work Experience</h2>
+
+          <!-- Role 1 -->
+          <div class="work-entry">
+            <div class="work-role-line">
+              <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/flipkart-icon.png" alt="Flipkart" class="work-role-logo" />
+              <span class="work-role">Analyst — Process Design & Automation</span>
+              <span class="work-company">· Flipkart</span>
+            </div>
+            <div class="work-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Dec 2025 – Present
+            </div>
+            <p class="work-subtitle">Python, SQL, Selenium, JavaScript, AI Tooling, GUI, Supply Chain</p>
+            <ul class="work-bullets">
+              <li>Developed <strong>Web-Based GeoPolygon Tool</strong> for Pan-India pincode/district-level geographic mapping, successfully integrated into <strong>Flipkart's Internal GeoPolygon system</strong></li>
+              <li>Built <strong>Misroute Debugging Tool</strong> using lat/long geolocation analysis, reducing misroute rates from <strong>8% → 0.4%</strong></li>
+              <li>Created <strong>Cluster Predicted Polygon Tool</strong> generating WM-wise polygons inside hub geofences for optimized last-mile delivery</li>
+              <li>Designed automation frameworks with <strong>Selenium</strong> and <strong>Python</strong> for supply chain process optimization</li>
+            </ul>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="work-entry">
+            <div class="work-role-line">
+              <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/flipkart-icon.png" alt="Flipkart" class="work-role-logo" />
+              <span class="work-role">Intern — Supply Chain Design / Automation</span>
+              <span class="work-company">· Flipkart</span>
+            </div>
+            <div class="work-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Nov 2023 – Nov 2025 · 2 years
+            </div>
+            <p class="work-subtitle">Python, Selenium, SQL, JavaScript</p>
+            <ul class="work-bullets">
+              <li>Built <strong>Short Address Prediction Tool</strong> processing <strong>5L+ shipments daily</strong> to flag short-address items, improving delivery accuracy</li>
+              <li>Developed data pipelines and automation scripts for daily operational workflows across supply chain hubs</li>
+              <li>Created internal dashboards and tools using <strong>JavaScript</strong>, <strong>Python</strong>, and <strong>Google APIs</strong> (Maps, Drive, Sheets)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Achievements, Skills, Education -->
+      <div>
+
+        <!-- Publications -->
+        <div class="right-section">
+          <h3 class="right-section-title">
+            <svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/></svg>
+            Publications
+          </h3>
+          <ul class="achievement-list">
+            <li><strong>Smart Health Care Monitoring System</strong> — IoT system tracking vitals via NodeMCU and ThinkSpeak cloud. <a href="https://ieeexplore.ieee.org/document/10307347" target="_blank">Published at ICCCNT 2023, IIT Delhi (IEEE)</a></li>
+          </ul>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="right-section">
+          <h3 class="right-section-title">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            Key Projects
+          </h3>
+          <ul class="achievement-list">
+            <li><strong>Web-Based GeoPolygon Tool</strong> — Pan-India geocoding integrated into Flipkart's internal systems</li>
+            <li><strong>Misroute Debugging Tool</strong> — Reduced misroutes from 8% → 0.4%</li>
+            <li><strong>Short Address Prediction</strong> — Processes 5L+ daily shipments</li>
+            <li><strong>Cluster Predicted Polygon</strong> — WM-wise polygons for last-mile delivery</li>
+            <li><strong>Personal Portfolio</strong> — <a href="https://github.com/subumohanty/Subhasis-Portfolio" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="right-section">
+          <h3 class="right-section-title">
+            <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            Technical Skills
+          </h3>
+          <div class="skills-grid-resume">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Selenium</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">PySpark</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">Tableau</span>
+            <span class="skill-pill">GMap API</span>
+            <span class="skill-pill">GDrive API</span>
+            <span class="skill-pill">Apps Script</span>
+            <span class="skill-pill">HTML/CSS</span>
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">Arduino</span>
+            <span class="skill-pill">NodeMCU</span>
+            <span class="skill-pill">Linux</span>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="right-section">
+          <h3 class="right-section-title">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            Education
+          </h3>
+          <div class="edu-entry">
+            <div class="edu-degree">B.Tech in Electronics And Communication Engineering</div>
+            <div class="edu-school">Sambalpur University Institute Of Information Technology | Sambalpur, Odisha</div>
+            <div class="edu-date">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Aug 2019 – May 2023
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer Tagline -->
+    <div class="resume-footer">
+      Still not convinced about hiring me? You can check out my portfolio at <a href="index.html">portfolio</a> or reach out at <a href="mailto:subhasis.mohanty@outlook.com">subhasis.mohanty@outlook.com</a> for any clarifications or questions. Thanks!
+    </div>
+
+  </div>
+
+</body>
+</html>
