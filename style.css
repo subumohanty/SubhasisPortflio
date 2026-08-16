@@ -1942,3 +1942,47 @@ img {
   100% { transform: translateY(-8px) rotate(-5deg) scale(0.95); }
 }
 
+
+/* ============================================
+   MOBILE TWEAKS (Responsive)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Fix Hero Section Layout */
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-title-group {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .hero-name-block {
+    align-items: center;
+  }
+  
+  .hero-name-block .hero-greeting, .hero-greeting {
+    text-align: center;
+  }
+
+  /* Make footer character and emojis smaller on phone */
+  .footer-character {
+    right: 15px;
+    bottom: 50px;
+    transform: scale(0.65);
+    transform-origin: bottom right;
+  }
+  
+  .footer-character:hover .character-svg {
+    transform: scale(1.05);
+  }
+  
+  .emoji-particle {
+    font-size: 0.85rem;
+  }
+}
